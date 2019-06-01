@@ -1,7 +1,7 @@
 # Учебный проект «Код и Магия» [![Build status][travis-image]][travis-url]
 
 * Студент: [Анна Кузнецова](https://up.htmlacademy.ru/javascript/17/user/228702).
-* Наставник: `Неизвестно`.
+* Наставник: [Мария Филиппова](https://up.htmlacademy.ru/javascript/17/user/136678).
 
 ---
 
