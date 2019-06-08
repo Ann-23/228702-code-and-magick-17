@@ -17,21 +17,32 @@ var getRandomIndex = function (array) {
   return (array[index]);
 };
 
-// функция создания объекта
+// функция генерации "склеенного" имени
+var getName = function (name, surname) {
+  var name = getRandomIndex(name) + ' ' + getRandomIndex(surname);
+  return name;
+};
+
+// функция создания объекта с 3 характеристиками волшебника
 var getObject = function (array, key) {
   var object = {};
-  object[key] = getRandomIndex(array);
+  for (var i = 0; i < values.length; i++) {
+    if (i === 0) {
+      object[key[i]] = getName(names, surnames);
+    }
+    if (i > 1) {
+      object[key[i]] = getRandomIndex(array[i]);
+    }
+  }
   return object;
 };
 
-// функция создания массива с 4 объектами
-var getArrayData = function (value, key) {
+// функция создания массива с 4 объектами-характеристиками волшебников
+var getArrayData = function () {
   var arrayData = [];
-  for (var i = 0; i < key.length; i++) {
-    var object = getObject(value[i], key[i]);
+  for (var i = 0; i < 4; i++) {
+    var object = getObject(values, keys);
     arrayData.push(object);
   }
   return arrayData;
 };
-
-getArrayData(values, keys);
